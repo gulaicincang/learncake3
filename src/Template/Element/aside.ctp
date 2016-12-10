@@ -46,6 +46,11 @@
           </a>
         </li> 
         <li>
+          <a href="/school-students">
+            <i class="fa fa-th"></i> <span>Murid</span>
+          </a>
+        </li> 
+        <li>
           <a href="/school-exams">
             <i class="fa fa-th"></i> <span>Hasil Ujian</span>
           </a>
