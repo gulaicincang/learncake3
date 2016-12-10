@@ -27,6 +27,7 @@ class SchoolExamsTableTest extends TestCase
         'app.school_exams',
         'app.school_students',
         'app.school_classes',
+        'app.school_teachers',
         'app.school_subjects'
     ];
 

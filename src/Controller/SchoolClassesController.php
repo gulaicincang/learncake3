@@ -18,6 +18,9 @@ class SchoolClassesController extends AppController
      */
     public function index()
     {
+        $this->paginate = [
+            'contain' => ['SchoolTeachers']
+        ];
         $schoolClasses = $this->paginate($this->SchoolClasses);
 
         $this->set(compact('schoolClasses'));
@@ -34,7 +37,7 @@ class SchoolClassesController extends AppController
     public function view($id = null)
     {
         $schoolClass = $this->SchoolClasses->get($id, [
-            'contain' => ['SchoolStudents']
+            'contain' => ['SchoolTeachers', 'SchoolStudents']
         ]);
 
         $this->set('schoolClass', $schoolClass);
@@ -59,7 +62,8 @@ class SchoolClassesController extends AppController
                 $this->Flash->error(__('The school class could not be saved. Please, try again.'));
             }
         }
-        $this->set(compact('schoolClass'));
+        $schoolTeachers = $this->SchoolClasses->SchoolTeachers->find('list', ['limit' => 200]);
+        $this->set(compact('schoolClass', 'schoolTeachers'));
         $this->set('_serialize', ['schoolClass']);
     }
 
@@ -85,7 +89,8 @@ class SchoolClassesController extends AppController
                 $this->Flash->error(__('The school class could not be saved. Please, try again.'));
             }
         }
-        $this->set(compact('schoolClass'));
+        $schoolTeachers = $this->SchoolClasses->SchoolTeachers->find('list', ['limit' => 200]);
+        $this->set(compact('schoolClass', 'schoolTeachers'));
         $this->set('_serialize', ['schoolClass']);
     }
 

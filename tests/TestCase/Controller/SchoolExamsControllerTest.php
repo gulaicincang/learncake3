@@ -19,6 +19,7 @@ class SchoolExamsControllerTest extends IntegrationTestCase
         'app.school_exams',
         'app.school_students',
         'app.school_classes',
+        'app.school_teachers',
         'app.school_subjects'
     ];
 

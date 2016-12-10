@@ -19,11 +19,13 @@
     <fieldset>
         <legend><?= __('Edit School Student') ?></legend>
         <?php
-            echo $this->Form->input('name');
-            echo $this->Form->input('school_class_id', ['options' => $schoolClasses]);
-            echo $this->Form->input('deleted');
+            echo $this->Form->input('name',['class'=>'form-control','div'=>'form-group']);
+            echo $this->Form->input('school_class_id', ['options' => $schoolClasses,'class'=>'form-control','div'=>'form-group']);
+            echo $this->Form->input('deleted',['class'=>'form-control','div'=>'form-group']);
         ?>
     </fieldset>
-    <?= $this->Form->button(__('Submit')) ?>
+    <div style="margin: 10px auto">
+        <?= $this->Form->button(__('Submit'),['class'=>'btn btn-primary btn-sm']) ?>
+    </div>
     <?= $this->Form->end() ?>
 </div>

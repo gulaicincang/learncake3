@@ -5,6 +5,8 @@
         <li><?= $this->Form->postLink(__('Delete School Class'), ['action' => 'delete', $schoolClass->id], ['confirm' => __('Are you sure you want to delete # {0}?', $schoolClass->id)]) ?> </li>
         <li><?= $this->Html->link(__('List School Classes'), ['action' => 'index']) ?> </li>
         <li><?= $this->Html->link(__('New School Class'), ['action' => 'add']) ?> </li>
+        <li><?= $this->Html->link(__('List School Teachers'), ['controller' => 'SchoolTeachers', 'action' => 'index']) ?> </li>
+        <li><?= $this->Html->link(__('New School Teacher'), ['controller' => 'SchoolTeachers', 'action' => 'add']) ?> </li>
         <li><?= $this->Html->link(__('List School Students'), ['controller' => 'SchoolStudents', 'action' => 'index']) ?> </li>
         <li><?= $this->Html->link(__('New School Student'), ['controller' => 'SchoolStudents', 'action' => 'add']) ?> </li>
     </ul>
@@ -17,16 +19,16 @@
             <td><?= h($schoolClass->code) ?></td>
         </tr>
         <tr>
+            <th scope="row"><?= __('School Teacher') ?></th>
+            <td><?= $schoolClass->has('school_teacher') ? $this->Html->link($schoolClass->school_teacher->name, ['controller' => 'SchoolTeachers', 'action' => 'view', $schoolClass->school_teacher->id]) : '' ?></td>
+        </tr>
+        <tr>
             <th scope="row"><?= __('Name') ?></th>
             <td><?= h($schoolClass->name) ?></td>
         </tr>
         <tr>
             <th scope="row"><?= __('Id') ?></th>
             <td><?= $this->Number->format($schoolClass->id) ?></td>
-        </tr>
-        <tr>
-            <th scope="row"><?= __('School Teacher Id') ?></th>
-            <td><?= $this->Number->format($schoolClass->school_teacher_id) ?></td>
         </tr>
         <tr>
             <th scope="row"><?= __('Created') ?></th>

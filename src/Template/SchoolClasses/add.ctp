@@ -2,6 +2,8 @@
     <ul class="side-nav">
         <li class="heading"><?= __('Actions') ?></li>
         <li><?= $this->Html->link(__('List School Classes'), ['action' => 'index']) ?></li>
+        <li><?= $this->Html->link(__('List School Teachers'), ['controller' => 'SchoolTeachers', 'action' => 'index']) ?></li>
+        <li><?= $this->Html->link(__('New School Teacher'), ['controller' => 'SchoolTeachers', 'action' => 'add']) ?></li>
         <li><?= $this->Html->link(__('List School Students'), ['controller' => 'SchoolStudents', 'action' => 'index']) ?></li>
         <li><?= $this->Html->link(__('New School Student'), ['controller' => 'SchoolStudents', 'action' => 'add']) ?></li>
     </ul>
@@ -11,12 +13,14 @@
     <fieldset>
         <legend><?= __('Add School Class') ?></legend>
         <?php
-            echo $this->Form->input('code');
-            echo $this->Form->input('school_teacher_id');
-            echo $this->Form->input('name');
-            echo $this->Form->input('deleted');
+            echo $this->Form->input('code',['class'=>'form-control','div'=>'form-group']);
+            echo $this->Form->input('school_teacher_id', ['options' => $schoolTeachers,'class'=>'form-control','div'=>'form-group']);
+            echo $this->Form->input('name',['class'=>'form-control','div'=>'form-group']);
+            echo $this->Form->input('deleted',['class'=>'form-control','div'=>'form-group']);
         ?>
     </fieldset>
-    <?= $this->Form->button(__('Submit')) ?>
+    <div style="margin: 10px auto">
+        <?= $this->Form->button(__('Submit'),['class'=>'btn btn-primary btn-sm']) ?>
+    </div>
     <?= $this->Form->end() ?>
 </div>

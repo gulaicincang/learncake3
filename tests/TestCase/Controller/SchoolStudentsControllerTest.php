@@ -18,6 +18,7 @@ class SchoolStudentsControllerTest extends IntegrationTestCase
     public $fixtures = [
         'app.school_students',
         'app.school_classes',
+        'app.school_teachers',
         'app.school_exams',
         'app.school_subjects'
     ];

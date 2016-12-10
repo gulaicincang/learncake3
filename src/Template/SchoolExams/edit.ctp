@@ -19,11 +19,13 @@
     <fieldset>
         <legend><?= __('Edit School Exam') ?></legend>
         <?php
-            echo $this->Form->input('school_student_id', ['options' => $schoolStudents]);
-            echo $this->Form->input('school_subject_id', ['options' => $schoolSubjects]);
-            echo $this->Form->input('score');
+            echo $this->Form->input('school_student_id', ['options' => $schoolStudents,'class'=>'form-control','div'=>'form-group']);
+            echo $this->Form->input('school_subject_id', ['options' => $schoolSubjects,'class'=>'form-control','div'=>'form-group']);
+            echo $this->Form->input('score',['class'=>'form-control','div'=>'form-group']);
         ?>
     </fieldset>
-    <?= $this->Form->button(__('Submit')) ?>
+    <div style="margin: 10px auto">
+        <?= $this->Form->button(__('Submit'),['class'=>'btn btn-primary btn-sm']) ?>
+    </div>
     <?= $this->Form->end() ?>
 </div>

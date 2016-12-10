@@ -1,4 +1,4 @@
-<nav class="large-3 medium-4 columns" id="actions-sidebar">
+<nav class="col-md-12 col-xs-12 columns" id="actions-sidebar">
     <ul class="side-nav">
         <li class="heading"><?= __('Actions') ?></li>
         <li><?= $this->Html->link(__('New School Exam'), ['action' => 'add']) ?></li>
@@ -8,9 +8,13 @@
         <li><?= $this->Html->link(__('New School Subject'), ['controller' => 'SchoolSubjects', 'action' => 'add']) ?></li>
     </ul>
 </nav>
-<div class="schoolExams index large-9 medium-8 columns content">
-    <h3><?= __('School Exams') ?></h3>
-    <table cellpadding="0" cellspacing="0">
+<div class="schoolExams index col-md-12 col-xs-12 columns content">
+    <div class="box">
+        <div class="box-header">
+        <h3 class="box-title"><?= __('School Exams') ?></h3>
+    </div>
+        <div class="box-body">
+    <table cellpadding="0" cellspacing="0" class="table table-striped table-bordered">
         <thead>
             <tr>
                 <th scope="col"><?= $this->Paginator->sort('id') ?></th>
@@ -38,7 +42,8 @@
             <?php endforeach; ?>
         </tbody>
     </table>
-    <div class="paginator">
+            </div>
+    <div class="box-footer">
         <ul class="pagination">
             <?= $this->Paginator->prev('< ' . __('previous')) ?>
             <?= $this->Paginator->numbers() ?>
@@ -47,3 +52,4 @@
         <p><?= $this->Paginator->counter() ?></p>
     </div>
 </div>
+    </div>

@@ -46,8 +46,8 @@ class SchoolStudentsFixture extends TestFixture
             'id' => 1,
             'name' => 'Lorem ipsum dolor sit amet',
             'school_class_id' => 1,
-            'created' => '2016-12-10 08:36:49',
-            'deleted' => '2016-12-10 08:36:49'
+            'created' => '2016-12-10 09:47:46',
+            'deleted' => '2016-12-10 09:47:46'
         ],
     ];
 }

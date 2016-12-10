@@ -13,6 +13,7 @@ use Cake\ORM\Entity;
  * @property \Cake\I18n\Time $created
  * @property \Cake\I18n\Time $deleted
  *
+ * @property \App\Model\Entity\SchoolTeacher $school_teacher
  * @property \App\Model\Entity\SchoolStudent[] $school_students
  */
 class SchoolClass extends Entity

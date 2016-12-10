@@ -44,8 +44,8 @@ class SchoolClassesFixture extends TestFixture
             'code' => 'Lorem ipsum dolor sit amet',
             'school_teacher_id' => 1,
             'name' => 'Lorem ipsum dolor sit amet',
-            'created' => '2016-12-10 09:04:35',
-            'deleted' => '2016-12-10 09:04:35'
+            'created' => '2016-12-10 09:47:58',
+            'deleted' => '2016-12-10 09:47:58'
         ],
     ];
 }

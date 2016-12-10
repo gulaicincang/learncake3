@@ -42,7 +42,7 @@ class SchoolExamsFixture extends TestFixture
             'id' => 1,
             'school_student_id' => 1,
             'school_subject_id' => 1,
-            'created' => '2016-12-10 08:32:50',
+            'created' => '2016-12-10 09:48:50',
             'score' => 1
         ],
     ];

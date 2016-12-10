@@ -25,6 +25,7 @@ class SchoolClassesTableTest extends TestCase
      */
     public $fixtures = [
         'app.school_classes',
+        'app.school_teachers',
         'app.school_students',
         'app.school_exams',
         'app.school_subjects'
@@ -70,6 +71,16 @@ class SchoolClassesTableTest extends TestCase
      * @return void
      */
     public function testValidationDefault()
+    {
+        $this->markTestIncomplete('Not implemented yet.');
+    }
+
+    /**
+     * Test buildRules method
+     *
+     * @return void
+     */
+    public function testBuildRules()
     {
         $this->markTestIncomplete('Not implemented yet.');
     }

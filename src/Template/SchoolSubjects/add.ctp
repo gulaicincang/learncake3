@@ -11,9 +11,11 @@
     <fieldset>
         <legend><?= __('Add School Subject') ?></legend>
         <?php
-            echo $this->Form->input('name');
+            echo $this->Form->input('name',['class'=>'form-control','div'=>'form-group']);
         ?>
     </fieldset>
-    <?= $this->Form->button(__('Submit')) ?>
+    <div style="margin: 10px auto">
+        <?= $this->Form->button(__('Submit'),['class'=>'btn btn-primary btn-sm']) ?>
+    </div>
     <?= $this->Form->end() ?>
 </div>
